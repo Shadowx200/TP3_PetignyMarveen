@@ -1,0 +1,9 @@
+.service-card,
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover,
+.product-card:hover {
+  transform: translateY(-8px);
+}
