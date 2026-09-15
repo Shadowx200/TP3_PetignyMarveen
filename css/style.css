@@ -1,9 +1,144 @@
-.service-card,
-.product-card {
+:root {
+  --color-services: #2b7a99;
+  --color-services-light: #a10f40;
+
+  --color-products: #a10f40;
+  --color-products-light: #a10f40;
+
+  --color-black: #111111;
+  --color-white: #ffffff;
+}
+/* Couleurs principales UrbanCut */
+
+/* PAGE SERVICES */
+
+.page--services {
+  background-color: var(--color-services);
+}
+
+/* PAGE PRODUITS */
+
+.page--products {
+  background-color: var(--color-products);
+}
+
+/* PAGE ACCUEIL */
+
+.page--home {
+  background: linear-gradient(
+    90deg,
+    var(--color-services) 0%,
+    var(--color-services) 50%,
+    var(--color-products) 50%,
+    var(--color-products) 100%
+  );
+}
+
+/* PAGE RÉSERVATION */
+
+.page--reservation {
+  background: linear-gradient(
+    90deg,
+    var(--color-services) 0%,
+    var(--color-services) 50%,
+    var(--color-products) 50%,
+    var(--color-products) 100%
+  );
+}
+
+.nav__link {
+  position: relative;
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.services__card,
+.products__card {
   transition: transform 0.3s ease;
 }
 
-.service-card:hover,
-.product-card:hover {
+.services__card:hover,
+.products__card:hover {
   transform: translateY(-8px);
+}
+
+.footer__link {
+  transition: opacity 0.3s ease;
+}
+
+.footer__link:hover {
+  opacity: 0.6;
+}
+
+.carousel__image {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel__image--fade {
+  opacity: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+@keyframes titleAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page__title {
+  animation: titleAppear 0.8s ease-out;
+}
+
+.faq__answer:not(.hidden) {
+  animation: faqAppear 0.3s ease;
+}
+
+@keyframes faqAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero,
+  .reservation__hero {
+    background: linear-gradient(
+      180deg,
+      var(--color-services) 0%,
+      var(--color-services) 50%,
+      var(--color-products) 50%,
+      var(--color-products) 100%
+    );
+  }
 }

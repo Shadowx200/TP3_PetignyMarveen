@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UrbanCut Barber | Accueil</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="page page--reservation">
+    <header class="header bg-black text-white">
+      <div id="mobileMenu" class="header__mobile-menu hidden md:hidden">
+        <ul class="flex flex-col text-center gap-4 py-4">
+          <li>
+            <a href="index.html" class="nav__link">Accueil</a>
+          </li>
+
+          <li>
+            <a href="services.html" class="nav__link">Services</a>
+          </li>
+
+          <li>
+            <a href="produits.html" class="nav__link">Produits</a>
+          </li>
+
+          <li>
+            <a href="reservation.html" class="nav__link">Réservation</a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="header__nav grid grid-cols-12 items-center px-6 py-4">
+        <div class="col-span-4">
+          <a
+            href="index.html"
+            class="header__logo flex items-center gap-2 text-2xl font-bold"
+          >
+            <img
+              src="images/LogoSite.png"
+              alt=""
+              class="header__logo-image w-9 h-9 object-contain"
+            />
+
+            <span>UrbanCut</span>
+          </a>
+        </div>
+
+        <!-- Liens de navigation -->
+        <div class="col-span-8">
+          <ul class="hidden md:flex justify-end gap-6">
+            <li>
+              <a href="index.html" class="nav__link">Accueil</a>
+            </li>
+
+            <li>
+              <a href="services.html" class="nav__link">Services</a>
+            </li>
+
+            <li>
+              <a href="produits.html" class="nav__link">Produits</a>
+            </li>
+
+            <li>
+              <a href="reservation.html" class="nav__link">Réservation</a>
+            </li>
+          </ul>
+
+          <!-- Bouton mobile -->
+          <button
+            id="menuButton"
+            class="header__menu-button md:hidden float-right text-2xl"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Présentation -->
+      <section class="reservation__hero py-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+          <h1 class="page__title text-4xl md:text-5xl font-bold mb-5">
+            Prendre rendez-vous
+          </h1>
+
+          <p class="text-lg max-w-2xl mx-auto">
+            Réservez votre prochain rendez-vous chez UrbanCut en remplissant le
+            formulaire ci-dessous.
+          </p>
+        </div>
+      </section>
+
+      <!-- Formulaire de réservation -->
+      <section class="reservation__form-section py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-3">Votre rendez-vous</h2>
+
+            <p>Remplissez les informations suivantes pour réserver.</p>
+          </div>
+
+          <form id="reservationForm" class="grid grid-cols-12 gap-6" novalidate>
+            <!-- Prénom -->
+            <div class="col-span-12 md:col-span-6">
+              <label for="prenom" class="block font-bold mb-2"> Prénom </label>
+
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                class="w-full border p-3"
+              />
+
+              <p
+                class="reservation__form-section__error text-red-600 text-sm mt-1"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- Nom -->
+            <div class="col-span-12 md:col-span-6">
+              <label for="nom" class="block font-bold mb-2"> Nom </label>
+
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                class="w-full border p-3"
+              />
+              <p
+                class="reservation__form-section__error text-red-600 text-sm mt-1"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- Courriel -->
+            <div class="col-span-12 md:col-span-6">
+              <label for="courriel" class="block font-bold mb-2">
+                Courriel
+              </label>
+
+              <input
+                type="email"
+                id="courriel"
+                name="courriel"
+                class="w-full border p-3"
+              />
+              <p
+                class="reservation__form-section__error text-red-600 text-sm mt-1"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- Téléphone -->
+            <div class="col-span-12 md:col-span-6">
+              <label for="telephone" class="block font-bold mb-2">
+                Téléphone
+              </label>
+
+              <input
+                type="tel"
+                id="telephone"
+                name="telephone"
+                class="w-full border p-3"
+              />
+              <p
+                class="reservation__form-section__error text-red-600 text-sm mt-1"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- Service -->
+            <div class="col-span-12 md:col-span-6">
+              <label for="service" class="block font-bold mb-2">
+                Service
+              </label>
+
+              <select id="service" name="service" class="w-full border p-3">
+                <option value="">Choisir un service</option>
+                <option value="classique">Coupe classique</option>
+                <option value="fade">Dégradé / Fade</option>
+                <option value="barbe">Taille de barbe</option>
+                <option value="coupe-barbe">Coupe + barbe</option>
+                <option value="contours">Contours</option>
+                <option value="enfant">Coupe enfant</option>
+              </select>
+              <p
+                class="reservation__form-section__error text-red-600 text-sm mt-1"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- Barbier -->
+            <div class="col-span-12 md:col-span-6">
+              <label for="barbier" class="block font-bold mb-2">
+                Barbier
+              </label>
+
+              <select id="barbier" name="barbier" class="w-full border p-3">
+                <option value="">Choisir un barbier</option>
+                <option value="alex">Alex</option>
+                <option value="marc">Marc</option>
+                <option value="sam">Sam</option>
+              </select>
+              <p
+                class="reservation__form-section__error text-red-600 text-sm mt-1"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- Date -->
+            <div class="col-span-12 md:col-span-6">
+              <label for="date" class="block font-bold mb-2"> Date </label>
+
+              <input
+                type="date"
+                id="date"
+                name="date"
+                class="w-full border p-3"
+              />
+              <p
+                class="reservation__form-section__error text-red-600 text-sm mt-1"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- Heure -->
+            <div class="col-span-12 md:col-span-6">
+              <label for="heure" class="block font-bold mb-2"> Heure </label>
+
+              <input
+                type="time"
+                id="heure"
+                name="heure"
+                class="w-full border p-3"
+              />
+              <p
+                class="reservation__form-section__error text-red-600 text-sm mt-1"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <!-- Notes -->
+            <div class="col-span-12">
+              <label for="notes" class="block font-bold mb-2"> Notes </label>
+
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                class="w-full border p-3"
+                placeholder="Informations supplémentaires..."
+              ></textarea>
+            </div>
+
+            <!-- Bouton -->
+            <div class="col-span-12 text-center">
+              <button type="submit" class="bg-black text-white px-8 py-3">
+                Réserver
+              </button>
+            </div>
+          </form>
+
+          <p
+            id="reservationMessage"
+            class="hidden mt-6 text-center font-bold bg-green-100 text-green-700 p-4"
+            role="status"
+          >
+            Votre rendez-vous a bien été enregistré !
+          </p>
+        </div>
+      </section>
+      <!-- Horaires et informations -->
+      <section class="reservation__info py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-3">Informations pratiques</h2>
+
+            <p>
+              Consultez nos horaires et nos informations avant votre visite.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-12 gap-6">
+            <!-- Horaires -->
+            <div class="col-span-12 md:col-span-6 border p-6">
+              <h3 class="text-xl font-bold mb-4">Heures d'ouverture</h3>
+
+              <div class="space-y-2">
+                <p>Lundi : 10 h - 18 h</p>
+                <p>Mardi : 10 h - 18 h</p>
+                <p>Mercredi : 10 h - 18 h</p>
+                <p>Jeudi : 10 h - 20 h</p>
+                <p>Vendredi : 10 h - 20 h</p>
+                <p>Samedi : 9 h - 17 h</p>
+                <p>Dimanche : Fermé</p>
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-span-12 md:col-span-6 border p-6">
+              <h3 class="text-xl font-bold mb-4">Nous contacter</h3>
+
+              <div class="space-y-3">
+                <p>
+                  <strong>Adresse :</strong><br />
+                  123, rue rumbling<br />
+                  Montréal, Québec
+                </p>
+
+                <p>
+                  <strong>Téléphone :</strong><br />
+                  (514) 555-1234
+                </p>
+
+                <p>
+                  <strong>Courriel :</strong><br />
+                  contact@urbancut.ca
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-black text-white py-10 px-6">
+      <div class="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
+        <!-- UrbanCut -->
+        <div class="col-span-12 md:col-span-4">
+          <h2 class="text-2xl font-bold mb-3">UrbanCut</h2>
+
+          <p>Votre style, notre passion.</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="col-span-12 md:col-span-4">
+          <h3 class="text-lg font-bold mb-3">Navigation</h3>
+
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class="footer__link">Accueil</a>
+            </li>
+
+            <li>
+              <a href="services.html" class="footer__link">Services</a>
+            </li>
+
+            <li>
+              <a href="produits.html" class="footer__link">Produits</a>
+            </li>
+
+            <li>
+              <a href="reservation.html" class="footer__link">Réservation</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-span-12 md:col-span-4">
+          <h3 class="text-lg font-bold mb-3">Contact</h3>
+
+          <p class="mb-2">123, rue rumbling</p>
+
+          <p class="mb-2">Montréal, Québec</p>
+
+          <p>(514) 555-1234</p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center border-t border-gray-700 mt-8 pt-6">
+        <p>&copy; 2026 UrbanCut. Tous droits réservés.</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/validationReservation.js"></script>
+  </body>
+</html>

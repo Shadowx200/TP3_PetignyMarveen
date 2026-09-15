@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UrbanCut Barber | Accueil</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="page page--products">
+    <header class="header bg-black text-white">
+      <div id="mobileMenu" class="header__mobile-menu hidden md:hidden">
+        <ul class="flex flex-col text-center gap-4 py-4">
+          <li>
+            <a href="index.html" class="nav__link">Accueil</a>
+          </li>
+
+          <li>
+            <a href="services.html" class="nav__link">Services</a>
+          </li>
+
+          <li>
+            <a href="produits.html" class="nav__link">Produits</a>
+          </li>
+
+          <li>
+            <a href="reservation.html" class="nav__link">Réservation</a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="header__nav grid grid-cols-12 items-center px-6 py-4">
+        <div class="col-span-4">
+          <a
+            href="index.html"
+            class="header__logo flex items-center gap-2 text-2xl font-bold"
+          >
+            <img
+              src="images/LogoSite.png"
+              alt=""
+              class="header__logo-image w-9 h-9 object-contain"
+            />
+
+            <span>UrbanCut</span>
+          </a>
+        </div>
+
+        <!-- Liens de navigation -->
+        <div class="col-span-8">
+          <ul class="hidden md:flex justify-end gap-6">
+            <li>
+              <a href="index.html" class="nav__link">Accueil</a>
+            </li>
+
+            <li>
+              <a href="services.html" class="nav__link">Services</a>
+            </li>
+
+            <li>
+              <a href="produits.html" class="nav__link">Produits</a>
+            </li>
+
+            <li>
+              <a href="reservation.html" class="nav__link">Réservation</a>
+            </li>
+          </ul>
+
+          <!-- Bouton mobile -->
+          <button
+            id="menuButton"
+            class="header__menu-button md:hidden float-right text-2xl"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Présentation des produits -->
+      <section class="products__hero py-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+          <h1 class="page__title text-4xl md:text-5xl font-bold mb-5">
+            Nos produits
+          </h1>
+
+          <p class="text-lg max-w-2xl mx-auto">
+            Découvrez notre sélection de produits pour prendre soin de vos
+            cheveux et de votre barbe à la maison.
+          </p>
+        </div>
+      </section>
+
+      <!-- Catalogue -->
+      <section class="products__list py-16 px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold mb-3">Notre sélection</h2>
+
+          <p>Trouvez le produit adapté à vos besoins.</p>
+        </div>
+
+        <div class="grid grid-cols-12 gap-6 max-w-6xl mx-auto">
+          <!-- Produit 1 -->
+          <article
+            class="products__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/produit-pommade.png"
+              alt="Pommade coiffante"
+              class="w-full h-[250px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Pommade coiffante</h3>
+
+              <p class="mb-4">
+                Pour coiffer vos cheveux et garder votre style en place.
+              </p>
+
+              <p class="font-bold text-lg">18 $</p>
+            </div>
+          </article>
+
+          <!-- Produit 2 -->
+          <article
+            class="products__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/produit-huile.png"
+              alt="Huile pour cheveux"
+              class="w-full h-[250px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Huile pour cheveux</h3>
+
+              <p class="mb-4">Aide à nourrir et hydrater les cheveux secs.</p>
+
+              <p class="font-bold text-lg">22 $</p>
+            </div>
+          </article>
+
+          <!-- Produit 3 -->
+          <article
+            class="products__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/produit-shampoing.png"
+              alt="Shampoing pour cheveux"
+              class="w-full h-[250px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Shampoing</h3>
+
+              <p class="mb-4">
+                Nettoie les cheveux tout en conservant leur hydratation.
+              </p>
+
+              <p class="font-bold text-lg">16 $</p>
+            </div>
+          </article>
+
+          <!-- Produit 4 -->
+          <article
+            class="products__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/produit-creme.png"
+              alt="Crème hydratante pour cheveux"
+              class="w-full h-[250px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Crème hydratante</h3>
+
+              <p class="mb-4">Pour garder les cheveux doux et bien hydratés.</p>
+
+              <p class="font-bold text-lg">20 $</p>
+            </div>
+          </article>
+
+          <!-- Produit 5 -->
+          <article
+            class="products__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/produit-huile-barbe.png"
+              alt="Huile pour barbe"
+              class="w-full h-[250px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Huile pour barbe</h3>
+
+              <p class="mb-4">Hydrate la barbe et aide à la garder douce.</p>
+
+              <p class="font-bold text-lg">19 $</p>
+            </div>
+          </article>
+
+          <!-- Produit 6 -->
+          <article
+            class="products__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/produit-gel.png"
+              alt="Gel coiffant"
+              class="w-full h-[250px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Gel coiffant</h3>
+
+              <p class="mb-4">
+                Offre une bonne tenue pour créer différents styles.
+              </p>
+
+              <p class="font-bold text-lg">15 $</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section conseils -->
+      <section class="products__advice py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-3">Quel produit choisir ?</h2>
+
+            <p>
+              Choisissez un produit selon les besoins de vos cheveux ou de votre
+              barbe.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-12 gap-6">
+            <!-- Conseil 1 -->
+            <div class="col-span-12 md:col-span-4 bg-white p-6 border">
+              <h3 class="text-xl font-bold mb-3">Cheveux secs</h3>
+
+              <p class="mb-4">
+                Vos cheveux ont besoin de plus d'hydratation et de douceur.
+              </p>
+
+              <p>
+                Produit conseillé :
+                <strong>Crème hydratante</strong>
+              </p>
+            </div>
+
+            <!-- Conseil 2 -->
+            <div class="col-span-12 md:col-span-4 bg-white p-6 border">
+              <h3 class="text-xl font-bold mb-3">Besoin de tenue</h3>
+
+              <p class="mb-4">
+                Vous voulez garder votre coiffure en place pendant la journée.
+              </p>
+
+              <p>
+                Produit conseillé :
+                <strong>Pommade coiffante</strong>
+              </p>
+            </div>
+
+            <!-- Conseil 3 -->
+            <div class="col-span-12 md:col-span-4 bg-white p-6 border">
+              <h3 class="text-xl font-bold mb-3">Barbe sèche</h3>
+
+              <p class="mb-4">
+                Votre barbe manque de douceur et semble plus difficile à
+                entretenir.
+              </p>
+
+              <p>
+                Produit conseillé :
+                <strong>Huile pour barbe</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-black text-white py-10 px-6">
+      <div class="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
+        <!-- UrbanCut -->
+        <div class="col-span-12 md:col-span-4">
+          <h2 class="text-2xl font-bold mb-3">UrbanCut</h2>
+
+          <p>Votre style, notre passion.</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="col-span-12 md:col-span-4">
+          <h3 class="text-lg font-bold mb-3">Navigation</h3>
+
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class="footer__link">Accueil</a>
+            </li>
+
+            <li>
+              <a href="services.html" class="footer__link">Services</a>
+            </li>
+
+            <li>
+              <a href="produits.html" class="footer__link">Produits</a>
+            </li>
+
+            <li>
+              <a href="reservation.html" class="footer__link">Réservation</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-span-12 md:col-span-4">
+          <h3 class="text-lg font-bold mb-3">Contact</h3>
+
+          <p class="mb-2">123, rue rumbling</p>
+
+          <p class="mb-2">Montréal, Québec</p>
+
+          <p>(514) 555-1234</p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center border-t border-gray-700 mt-8 pt-6">
+        <p>&copy; 2026 UrbanCut. Tous droits réservés.</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

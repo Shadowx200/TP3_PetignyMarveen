@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UrbanCut Barber | Accueil</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="page page--services">
+    <header class="header bg-black text-white">
+      <div id="mobileMenu" class="header__mobile-menu hidden md:hidden">
+        <ul class="flex flex-col text-center gap-4 py-4">
+          <li>
+            <a href="index.html" class="nav__link">Accueil</a>
+          </li>
+
+          <li>
+            <a href="services.html" class="nav__link">Services</a>
+          </li>
+
+          <li>
+            <a href="produits.html" class="nav__link">Produits</a>
+          </li>
+
+          <li>
+            <a href="reservation.html" class="nav__link">Réservation</a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="header__nav grid grid-cols-12 items-center px-6 py-4">
+        <div class="col-span-4">
+          <a
+            href="index.html"
+            class="header__logo flex items-center gap-2 text-2xl font-bold"
+          >
+            <img
+              src="images/LogoSite.png"
+              alt=""
+              class="header__logo-image w-9 h-9 object-contain"
+            />
+
+            <span>UrbanCut</span>
+          </a>
+        </div>
+
+        <!-- Liens de navigation -->
+        <div class="col-span-8">
+          <ul class="hidden md:flex justify-end gap-6">
+            <li>
+              <a href="index.html" class="nav__link">Accueil</a>
+            </li>
+
+            <li>
+              <a href="services.html" class="nav__link">Services</a>
+            </li>
+
+            <li>
+              <a href="produits.html" class="nav__link">Produits</a>
+            </li>
+
+            <li>
+              <a href="reservation.html" class="nav__link">Réservation</a>
+            </li>
+          </ul>
+
+          <!-- Bouton mobile -->
+          <button
+            id="menuButton"
+            class="header__menu-button md:hidden float-right text-2xl"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Présentation des services -->
+      <section class="services__hero py-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+          <h1 class="page__title text-4xl md:text-5xl font-bold mb-5">
+            Nos services
+          </h1>
+
+          <p class="text-lg max-w-2xl mx-auto">
+            Découvrez nos différents services et choisissez la coupe qui
+            correspond le mieux à votre style.
+          </p>
+        </div>
+      </section>
+
+      <!-- Services et tarifs -->
+      <section class="services__list py-16 px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold mb-3">Services et tarifs</h2>
+
+          <p>Choisissez le service qui vous convient.</p>
+        </div>
+
+        <div class="grid grid-cols-12 gap-6 max-w-6xl mx-auto">
+          <!-- Service 1 -->
+          <article
+            class="services__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/service-classique.png"
+              alt="Exemple de coupe classique"
+              class="w-full h-[220px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Coupe classique</h3>
+
+              <p class="mb-4">
+                Une coupe simple et soignée adaptée à votre style.
+              </p>
+
+              <p class="font-bold text-lg mb-4">30 $</p>
+
+              <a
+                href="reservation.html"
+                class="inline-block bg-black text-white px-5 py-2"
+              >
+                Réserver
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 2 -->
+          <article
+            class="services__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/service-fade.png"
+              alt="Exemple de coupe avec dégradé"
+              class="w-full h-[220px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Dégradé / Fade</h3>
+
+              <p class="mb-4">
+                Un dégradé moderne réalisé selon le style que vous désirez.
+              </p>
+
+              <p class="font-bold text-lg mb-4">35 $</p>
+
+              <a
+                href="reservation.html"
+                class="inline-block bg-black text-white px-5 py-2"
+              >
+                Réserver
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 3 -->
+          <article
+            class="services__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/barbe.png"
+              alt="Exemple de taille de barbe"
+              class="w-full h-[220px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Taille de barbe</h3>
+
+              <p class="mb-4">
+                Entretien et taille de votre barbe pour un résultat propre.
+              </p>
+
+              <p class="font-bold text-lg mb-4">20 $</p>
+
+              <a
+                href="reservation.html"
+                class="inline-block bg-black text-white px-5 py-2"
+              >
+                Réserver
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 4 -->
+          <article
+            class="services__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/CoupeETbarbe.png"
+              alt="Service de coupe de cheveux et taille de barbe"
+              class="w-full h-[220px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Coupe + barbe</h3>
+
+              <p class="mb-4">
+                Une coupe accompagnée d'une taille de barbe pour un look
+                complet.
+              </p>
+
+              <p class="font-bold text-lg mb-4">45 $</p>
+
+              <a
+                href="reservation.html"
+                class="inline-block bg-black text-white px-5 py-2"
+              >
+                Réserver
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 5 -->
+          <article
+            class="services__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/service-contour.png"
+              alt="Service de contours de cheveux"
+              class="w-full h-[220px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Contours</h3>
+
+              <p class="mb-4">
+                Une finition précise des contours pour garder une coupe propre.
+              </p>
+
+              <p class="font-bold text-lg mb-4">15 $</p>
+
+              <a
+                href="reservation.html"
+                class="inline-block bg-black text-white px-5 py-2"
+              >
+                Réserver
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 6 -->
+          <article
+            class="services__card col-span-12 md:col-span-6 lg:col-span-4 border overflow-hidden"
+          >
+            <img
+              src="images/service-enfants.png"
+              alt="Coupe de cheveux pour enfant"
+              class="w-full h-[220px] object-cover"
+            />
+
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Coupe enfant</h3>
+
+              <p class="mb-4">
+                Une coupe adaptée aux enfants avec le style de leur choix.
+              </p>
+
+              <p class="font-bold text-lg mb-4">25 $</p>
+
+              <a
+                href="reservation.html"
+                class="inline-block bg-black text-white px-5 py-2"
+              >
+                Réserver
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-3">Questions fréquentes</h2>
+
+            <p>Voici les réponses aux questions les plus fréquentes.</p>
+          </div>
+
+          <!-- Question 1 -->
+          <div class="faq__item border-b border-gray-300 py-4">
+            <button
+              class="faq__button w-full flex justify-between items-center text-left"
+              aria-expanded="false"
+              aria-controls="faq-answer-1"
+            >
+              <span class="font-bold"> Combien de temps dure une coupe ? </span>
+
+              <span class="faq__icon">+</span>
+            </button>
+
+            <div id="faq-answer-1" class="faq__answer hidden">
+              <p>Une coupe dure généralement entre 30 et 45 minutes.</p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq__item border-b border-gray-300 py-4">
+            <button
+              class="faq__button w-full flex justify-between items-center text-left"
+              aria-expanded="false"
+              aria-controls="faq-answer-2"
+            >
+              <span class="font-bold"> Dois-je prendre rendez-vous ? </span>
+
+              <span class="faq__icon">+</span>
+            </button>
+
+            <div id="faq-answer-2" class="faq__answer hidden pt-4">
+              <p>
+                Il est recommandé de prendre rendez-vous afin de garantir votre
+                place.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq__item border-b border-gray-300 py-4">
+            <button
+              class="faq__button w-full flex justify-between items-center text-left"
+              aria-expanded="false"
+              aria-controls="faq-answer-3"
+            >
+              <span class="font-bold">
+                Quels modes de paiement acceptez-vous ?
+              </span>
+
+              <span class="faq__icon">+</span>
+            </button>
+
+            <div id="faq-answer-3" class="faq__answer hidden pt-4">
+              <p>
+                Nous acceptons les paiements par carte, débit et argent
+                comptant.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer bg-black text-white py-10 px-6">
+      <div class="grid grid-cols-12 gap-8 max-w-6xl mx-auto">
+        <!-- UrbanCut -->
+        <div class="col-span-12 md:col-span-4">
+          <h2 class="text-2xl font-bold mb-3">UrbanCut</h2>
+
+          <p>Votre style, notre passion.</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="col-span-12 md:col-span-4">
+          <h3 class="text-lg font-bold mb-3">Navigation</h3>
+
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class="footer__link">Accueil</a>
+            </li>
+
+            <li>
+              <a href="services.html" class="footer__link">Services</a>
+            </li>
+
+            <li>
+              <a href="produits.html" class="footer__link">Produits</a>
+            </li>
+
+            <li>
+              <a href="reservation.html" class="footer__link">Réservation</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-span-12 md:col-span-4">
+          <h3 class="text-lg font-bold mb-3">Contact</h3>
+
+          <p class="mb-2">123, rue rumbling</p>
+
+          <p class="mb-2">Montréal, Québec</p>
+
+          <p>(514) 555-1234</p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center border-t border-gray-700 mt-8 pt-6">
+        <p>&copy; 2026 UrbanCut. Tous droits réservés.</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
