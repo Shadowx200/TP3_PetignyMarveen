@@ -142,3 +142,8 @@ textarea:focus {
     );
   }
 }
+
+a,
+button {
+  cursor: pointer;
+}
